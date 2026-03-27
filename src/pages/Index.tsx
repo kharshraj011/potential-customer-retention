@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DollarSign, TrendingUp, UserMinus, Users, CreditCard, Heart } from "lucide-react";
+import { DollarSign, TrendingUp, UserMinus, Users, CreditCard, ArrowUpCircle, ArrowDownCircle } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import RevenueGrowthChart from "@/components/RevenueGrowthChart";
 import CityRevenueChart from "@/components/CityRevenueChart";
@@ -76,6 +76,13 @@ const Index = () => {
           <div className="flex flex-col gap-2.5">
             <KPIItem
               icon={DollarSign}
+              label="Total Revenue"
+              value={`$${kpi.totalRevenue.toLocaleString()}`}
+              colorClass="text-primary"
+              bgClass="bg-[hsl(var(--kpi-revenue-bg))]"
+            />
+            <KPIItem
+              icon={DollarSign}
               label="Monthly Recurring Revenue"
               value={`$${kpi.mrr.toLocaleString()}`}
               colorClass="text-primary"
@@ -89,11 +96,18 @@ const Index = () => {
               bgClass="bg-[hsl(var(--kpi-growth-bg))]"
             />
             <KPIItem
-              icon={Users}
-              label="Active Users"
-              value={kpi.activeCustomers.toLocaleString()}
-              colorClass="text-primary"
-              bgClass="bg-[hsl(var(--kpi-active-bg))]"
+              icon={ArrowUpCircle}
+              label="Highest Sale City"
+              value={[...cityData].sort((a, b) => b.avgRevenue - a.avgRevenue)[0]?.city ?? "—"}
+              colorClass="text-accent"
+              bgClass="bg-[hsl(var(--kpi-growth-bg))]"
+            />
+            <KPIItem
+              icon={ArrowDownCircle}
+              label="Lowest Sale City"
+              value={[...cityData].sort((a, b) => a.avgRevenue - b.avgRevenue)[0]?.city ?? "—"}
+              colorClass="text-destructive"
+              bgClass="bg-[hsl(var(--kpi-churn-bg))]"
             />
             <KPIItem
               icon={UserMinus}
@@ -108,13 +122,6 @@ const Index = () => {
               value={`$${kpi.cac}`}
               colorClass="text-primary"
               bgClass="bg-[hsl(var(--kpi-revenue-bg))]"
-            />
-            <KPIItem
-              icon={Heart}
-              label="Life Time Value"
-              value={`$${((kpi.mrr / kpi.churnRate) * 100).toFixed(2)}`}
-              colorClass="text-accent"
-              bgClass="bg-[hsl(var(--kpi-growth-bg))]"
             />
           </div>
 
