@@ -1,0 +1,61 @@
+export const monthlyRevenueData = [
+  { month: "Jan '22", revenue: 2620, growth: 0 },
+  { month: "Feb '22", revenue: 3600, growth: 37.4 },
+  { month: "Mar '22", revenue: 2400, growth: -33.3 },
+  { month: "Apr '22", revenue: 1980, growth: -17.5 },
+  { month: "May '22", revenue: 3550, growth: 79.3 },
+  { month: "Jun '22", revenue: 2620, growth: -26.2 },
+  { month: "Jul '22", revenue: 2610, growth: -0.4 },
+  { month: "Aug '22", revenue: 3570, growth: 36.8 },
+  { month: "Sep '22", revenue: 2380, growth: -33.3 },
+  { month: "Oct '22", revenue: 2500, growth: 5.0 },
+  { month: "Nov '22", revenue: 4170, growth: 66.8 },
+  { month: "Dec '22", revenue: 3150, growth: -24.5 },
+  { month: "Jan '23", revenue: 3140, growth: -0.3 },
+  { month: "Feb '23", revenue: 3030, growth: -3.5 },
+  { month: "Mar '23", revenue: 3580, growth: 18.2 },
+  { month: "Apr '23", revenue: 2300, growth: -35.8 },
+  { month: "May '23", revenue: 2990, growth: 30.0 },
+  { month: "Jun '23", revenue: 2710, growth: -9.4 },
+  { month: "Jul '23", revenue: 2100, growth: -22.5 },
+  { month: "Aug '23", revenue: 2510, growth: 19.5 },
+  { month: "Sep '23", revenue: 3670, growth: 46.2 },
+  { month: "Oct '23", revenue: 2580, growth: -29.7 },
+  { month: "Nov '23", revenue: 3380, growth: 31.0 },
+  { month: "Dec '23", revenue: 3990, growth: 18.0 },
+  { month: "Jan '24", revenue: 3150, growth: -21.1 },
+  { month: "Feb '24", revenue: 2120, growth: -32.7 },
+  { month: "Mar '24", revenue: 3390, growth: 59.9 },
+  { month: "Apr '24", revenue: 2440, growth: -28.0 },
+  { month: "May '24", revenue: 2200, growth: -9.8 },
+  { month: "Jun '24", revenue: 2800, growth: 27.3 },
+  { month: "Jul '24", revenue: 3690, growth: 31.8 },
+  { month: "Aug '24", revenue: 2100, growth: -43.1 },
+  { month: "Sep '24", revenue: 2800, growth: 33.3 },
+  { month: "Oct '24", revenue: 2860, growth: 2.1 },
+  { month: "Nov '24", revenue: 3210, growth: 12.2 },
+  { month: "Dec '24", revenue: 2750, growth: -14.3 },
+];
+
+export const channelRevenueData = [
+  { channel: "SEO", revenue: 33087, percentage: 31.6 },
+  { channel: "Content Marketing", revenue: 36906, percentage: 35.3 },
+  { channel: "Email", revenue: 34637, percentage: 33.1 },
+];
+
+export const kpiData = {
+  totalRevenue: 104630,
+  growthPercent: 5.1,
+  activeCustomers: 750,
+  churnRate: 20.0,
+  revenueLost: 20348,
+  atRiskCustomers: 50,
+  churnedCustomers: 200,
+};
+
+export const insights = [
+  { icon: "trending", text: "Revenue fluctuates month to month — seasonal patterns and campaign cycles drive variance." },
+  { icon: "search", text: "SEO is the strongest scalable acquisition channel with highest long-term ROI potential." },
+  { icon: "plan", text: "Medium plan drives the most revenue — opportunity to upsell to Large tier." },
+  { icon: "alert", text: "Churn creates measurable revenue leakage — $20.3K monthly revenue at risk." },
+];
