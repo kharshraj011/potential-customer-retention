@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DollarSign, TrendingUp, UserMinus, Users, CreditCard, Heart } from "lucide-react";
+import { DollarSign, TrendingUp, UserMinus, Users, CreditCard, ArrowUpCircle, ArrowDownCircle } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import RevenueGrowthChart from "@/components/RevenueGrowthChart";
 import CityRevenueChart from "@/components/CityRevenueChart";
